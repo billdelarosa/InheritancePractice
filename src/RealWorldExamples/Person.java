@@ -2,21 +2,47 @@ package RealWorldExamples;
 
 
 public class Person extends Mammal{
-    public String name;
-    public String gender;
+    private String name;
+    private String gender;
 
     public Person(){
-        super.numberOfLegs = 2;
-        super.speciesName = "Human";
+        name = "Bob";
+        gender = "Male";
     }
     
     public Person(String name, String gender){
         this.name = name;
         this.gender = gender;
-        super.numberOfLegs = 2;
-        super.speciesName = "Human";
     }
-    public void speak(){
-        System.out.println("Hello, I am a " + speciesName);
+    
+    public void liveLife(){
+        System.out.println("Living life, doing normal Person things");
     }
+
+    @Override
+    public void walk() {
+        System.out.println("Person is going for a walk");
+    }
+
+    @Override
+    public void makeNoise() {
+        System.out.println("Person is making ambiguous noises");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+    
 }

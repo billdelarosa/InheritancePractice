@@ -2,26 +2,37 @@
 package ImaginaryObjectExamples;
 
 
-public class Pokemon {
+public abstract class Pokemon {
     
-    public String type;
-    public String name;
+    private String pokedexId;
+    private String name;
     
     public Pokemon(){
         
     }
     
-    public Pokemon(String name, String type){
+    public Pokemon(String name, String pokedex){
         this.name = name;
-        this.type = type;
+        this.pokedexId = pokedex;
     }
     
-    public void battle(){
-        System.out.println("Now battling with " + name + " who is an " + type + " type Pokemon");
+    public abstract void battle();
+    public abstract void heal();
+
+    public String getPokedexId() {
+        return pokedexId;
     }
-    
-    public void heal(){
-        System.out.println("Using a Potion on " + name);
+
+    public void setPokedexId(String pokedexId) {
+        this.pokedexId = pokedexId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
     
 }

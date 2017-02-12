@@ -1,16 +1,20 @@
 package RealWorldExamples;
 
 
-public class Mammal {
-    public String speciesName;
-    public Integer numberOfLegs;
+public abstract class Mammal {
+    private String age;
+    private Integer numberOfLegs;
 
-    public String getSpeciesName() {
-        return speciesName;
+    public abstract void walk();
+    public abstract void makeNoise();
+    
+    
+    public String getAge() {
+        return age;
     }
 
-    public void setSpeciesName(String speciesName) {
-        this.speciesName = speciesName;
+    public void setAge(String age) {
+        this.age = age;
     }
 
     public Integer getNumberOfLegs() {
@@ -20,8 +24,5 @@ public class Mammal {
     public void setNumberOfLegs(Integer numberOfLegs) {
         this.numberOfLegs = numberOfLegs;
     }
-    
-    public void walk(){
-        System.out.println("Going for a walk");
-    }
+
 }

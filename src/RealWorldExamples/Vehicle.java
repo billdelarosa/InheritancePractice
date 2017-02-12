@@ -2,22 +2,32 @@ package RealWorldExamples;
 
 
 public class Vehicle extends TransportationMethod {
-    public Integer numOfWheels;
-    public String licensePlateNumber;
+    private Integer numOfWheels;
+    private String licensePlateNumber;
+    private  String vehicleColor;
     
     public Vehicle(){
-        super.transportMethodName = "Motorcycle";
         numOfWheels = 2;
-        super.runningStatus = false;
+        licensePlateNumber = null;
+        vehicleColor = "Red";
     }
 
     @Override
     public void start() {
-        System.out.println("Starting " + transportMethodName); 
+        System.out.println("Starting vehicle"); 
     }
 
     @Override
     public void stop() {
-        System.out.println("Stopping " + transportMethodName);
+        System.out.println("Stopping vehicle");
     }
+
+    public String getLicensePlateNumber() {
+        return licensePlateNumber;
+    }
+
+    public void setLicensePlateNumber(String licensePlateNumber) {
+        this.licensePlateNumber = licensePlateNumber;
+    }
+    
 }

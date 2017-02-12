@@ -3,25 +3,47 @@ package RealWorldExamples;
 
 public class Chicken extends Meat{
     public String seasoning;
-    public String age;
+    public String weight;
     
     public Chicken (){
         seasoning = "salt";
-        super.gramsOfFat = 4;
-        super.gramsOfProtein = 10;
-        super.isExpired = false;
-        super.sugarAmountInGrams = 0;
-    }
-
-    @Override
-    public void grill() {
-        System.out.println("Grilling the chicken to perfection...");
+        super.setGramsOfFat(4);
+        super.setGramsOfProtein(10);
     }
     
-    @Override
-    public void boil() {
-        System.out.println("Boiling the chicken...");
+    public void season(){
+        System.out.println("Season the chicken to perfection");
     }
+       
+    public void eat(){
+        System.out.println("Eat the chicken");
+    }
+    public void serve(){
+        System.out.println("Serve up the chicken");
+    }
+    public void disposeOf(){
+        System.out.println("Dispose of the chicken");
+    }
+    public void cook(){
+        System.out.println("Cook the chicken!");
+    }
+
+    public String getSeasoning() {
+        return seasoning;
+    }
+
+    public void setSeasoning(String seasoning) {
+        this.seasoning = seasoning;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
+    }
+    
 
     
 }

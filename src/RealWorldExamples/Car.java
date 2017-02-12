@@ -12,17 +12,41 @@ public class Car extends Vehicle {
     private Boolean runningStatus = false;
     
     public Car(){
-        super.transportMethodName = "Car";
-        super.numOfWheels = 4;
+        super.setMaxSpeed("100 MPH");
     }
     
     @Override
     public void start(){
-        System.out.println("Starting " + transportMethodName);
+        System.out.println("Starting " + brand + " car with " + engineType + " type motor");
     }
     
     @Override
     public void stop(){
-        System.out.println("Stopping " + transportMethodName);
+        System.out.println("Stopping " + brand + " car");
     }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getEngineType() {
+        return engineType;
+    }
+
+    public void setEngineType(String engineType) {
+        this.engineType = engineType;
+    }
+
+    public Boolean getRunningStatus() {
+        return runningStatus;
+    }
+
+    public void setRunningStatus(Boolean runningStatus) {
+        this.runningStatus = runningStatus;
+    }
+    
 }

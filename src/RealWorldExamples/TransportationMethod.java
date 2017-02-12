@@ -1,19 +1,27 @@
 package RealWorldExamples;
 
 
-public class TransportationMethod {
-    private String travelSpeed;
-    public String transportMethodName;
+public abstract class TransportationMethod {
+    private String maxSpeed;
     public Boolean runningStatus = false;
     
-    public void start(){
-        runningStatus = true;
-        System.out.println("Starting transport to destination");
+    public abstract void start();
+    public abstract void stop();
+
+    public String getMaxSpeed() {
+        return maxSpeed;
     }
-    
-    public void stop(){
-        runningStatus = false;
-        System.out.println("Stopping transportation to destination");
+
+    public void setMaxSpeed(String maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public Boolean getRunningStatus() {
+        return runningStatus;
+    }
+
+    public void setRunningStatus(Boolean runningStatus) {
+        this.runningStatus = runningStatus;
     }
     
     

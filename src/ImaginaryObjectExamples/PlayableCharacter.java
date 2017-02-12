@@ -1,20 +1,32 @@
 package ImaginaryObjectExamples;
 
 
-public class PlayableCharacter {
-    public String factionOfCharacter;
-    public String realmOfCharacter;
+public abstract class PlayableCharacter {
+    private String gender;
+    private String race;
     
     public PlayableCharacter(){
-        factionOfCharacter = null;
-        realmOfCharacter = "Beginner";
+        gender = null;
+        race = "Human";
     }
     
-    public void create(){
-        System.out.println("Creating a playable character on the " + realmOfCharacter + " realm");
+    public abstract void create();
+    public abstract void delete();
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getRace() {
+        return race;
+    }
+
+    public void setRace(String race) {
+        this.race = race;
     }
     
-    public void delete(){
-        System.out.println("Deleting character");
-    }
 }
